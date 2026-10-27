@@ -21,9 +21,9 @@ localparam                          SCR1_MEM_SIZE       = 1024*1024;
 localparam                          TIMEOUT             = 'd2000_000;//20ms;
 localparam                          ARCH                = 'h1;
 localparam                          COMPLIANCE          = 'h2;
-localparam                          ADDR_START          = 'h200;
+localparam                          ADDR_START          = SCR1_ARCH_RST_VECTOR;
 localparam                          ADDR_TRAP_VECTOR    = 'h240;
-localparam                          ADDR_TRAP_DEFAULT   = 'h1C0;
+localparam                          ADDR_TRAP_DEFAULT   = SCR1_ARCH_MTVEC_BASE;
 
 //------------------------------------------------------------------------------
 // Local signal declaration
