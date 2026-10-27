@@ -101,6 +101,8 @@
 
 #define INTERRUPT_HANDLER j other_exception /* No interrupts should occur */
 
+#define SCR1_SIM_PRINT_ADDR 0xF0000000 /* tb prints bytes written here */
+
 #define RVTEST_CODE_BEGIN                                               \
         .section .text.trap;                                            \
         .weak stvec_handler;                                            \
@@ -114,7 +116,24 @@ trap_vector:                                                            \
         beq a4, a5, _report;                                            \
         li a5, CAUSE_MACHINE_ECALL;                                     \
         beq a4, a5, _report;                                            \
+        /* on illegal instruction print "illexc" to the sim console */  \
+        li a5, CAUSE_ILLEGAL_INSTRUCTION;                               \
+        bne a4, a5, 2f;                                                 \
+        csrw mscratch, a6;                                              \
+        li a6, SCR1_SIM_PRINT_ADDR;                                     \
+        la a4, illexc_msg;                                              \
+3:      lbu a5, 0(a4);                                                  \
+        beqz a5, 4f;                                                    \
+        sw a5, 0(a6);                                                   \
+        addi a4, a4, 1;                                                 \
+        j 3b;                                                           \
+4:      csrr a6, mscratch;                                              \
+        .pushsection .data;                                             \
+illexc_msg:                                                             \
+        .string "illexc\n";                                            \
+        .popsection;                                                    \
         /* if an mtvec_handler is defined, jump to it */                \
+2:                                                                      \
         la a4, mtvec_handler;                                           \
         beqz a4, 1f;                                                    \
         jr a4;                                                          \
