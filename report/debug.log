@@ -1,0 +1,61 @@
+scr1_top_tb_ahb
+---Test:                          add.hex
+ADD pc=000002a8 instr=002081b3 opcode=33 funct3=0 funct7=00 rd=x3 rs1=x1 rs2=x2 rs1_value=00000000 rs2_value=00000000 result=00000000
+ADD pc=000002c0 instr=002081b3 opcode=33 funct3=0 funct7=00 rd=x3 rs1=x1 rs2=x2 rs1_value=00000001 rs2_value=00000001 result=00000002
+ADD pc=000002d8 instr=002081b3 opcode=33 funct3=0 funct7=00 rd=x3 rs1=x1 rs2=x2 rs1_value=00000003 rs2_value=00000007 result=0000000a
+ADD pc=000002f0 instr=002081b3 opcode=33 funct3=0 funct7=00 rd=x3 rs1=x1 rs2=x2 rs1_value=00000000 rs2_value=ffff8000 result=ffff8000
+ADD pc=00000308 instr=002081b3 opcode=33 funct3=0 funct7=00 rd=x3 rs1=x1 rs2=x2 rs1_value=80000000 rs2_value=00000000 result=80000000
+ADD pc=00000320 instr=002081b3 opcode=33 funct3=0 funct7=00 rd=x3 rs1=x1 rs2=x2 rs1_value=80000000 rs2_value=ffff8000 result=7fff8000
+ADD pc=0000033c instr=002081b3 opcode=33 funct3=0 funct7=00 rd=x3 rs1=x1 rs2=x2 rs1_value=00000000 rs2_value=00007fff result=00007fff
+ADD pc=0000035c instr=002081b3 opcode=33 funct3=0 funct7=00 rd=x3 rs1=x1 rs2=x2 rs1_value=7fffffff rs2_value=00000000 result=7fffffff
+ADD pc=00000380 instr=002081b3 opcode=33 funct3=0 funct7=00 rd=x3 rs1=x1 rs2=x2 rs1_value=7fffffff rs2_value=00007fff result=80007ffe
+ADD pc=000003a0 instr=002081b3 opcode=33 funct3=0 funct7=00 rd=x3 rs1=x1 rs2=x2 rs1_value=80000000 rs2_value=00007fff result=80007fff
+ADD pc=000003c0 instr=002081b3 opcode=33 funct3=0 funct7=00 rd=x3 rs1=x1 rs2=x2 rs1_value=7fffffff rs2_value=ffff8000 result=7fff7fff
+ADD pc=000003dc instr=002081b3 opcode=33 funct3=0 funct7=00 rd=x3 rs1=x1 rs2=x2 rs1_value=00000000 rs2_value=ffffffff result=ffffffff
+ADD pc=000003f4 instr=002081b3 opcode=33 funct3=0 funct7=00 rd=x3 rs1=x1 rs2=x2 rs1_value=ffffffff rs2_value=00000001 result=00000000
+ADD pc=0000040c instr=002081b3 opcode=33 funct3=0 funct7=00 rd=x3 rs1=x1 rs2=x2 rs1_value=ffffffff rs2_value=ffffffff result=fffffffe
+ADD pc=00000428 instr=002081b3 opcode=33 funct3=0 funct7=00 rd=x3 rs1=x1 rs2=x2 rs1_value=00000001 rs2_value=7fffffff result=80000000
+ADD pc=00000440 instr=002080b3 opcode=33 funct3=0 funct7=00 rd=x1 rs1=x1 rs2=x2 rs1_value=0000000d rs2_value=0000000b result=00000018
+ADD pc=00000458 instr=00208133 opcode=33 funct3=0 funct7=00 rd=x2 rs1=x1 rs2=x2 rs1_value=0000000e rs2_value=0000000b result=00000019
+ADD pc=0000046c instr=001080b3 opcode=33 funct3=0 funct7=00 rd=x1 rs1=x1 rs2=x1 rs1_value=0000000d rs2_value=0000000d result=0000001a
+ADD pc=00000488 instr=002081b3 opcode=33 funct3=0 funct7=00 rd=x3 rs1=x1 rs2=x2 rs1_value=0000000d rs2_value=0000000b result=00000018
+ADD pc=00000488 instr=002081b3 opcode=33 funct3=0 funct7=00 rd=x3 rs1=x1 rs2=x2 rs1_value=0000000d rs2_value=0000000b result=00000018
+ADD pc=000004b4 instr=002081b3 opcode=33 funct3=0 funct7=00 rd=x3 rs1=x1 rs2=x2 rs1_value=0000000e rs2_value=0000000b result=00000019
+ADD pc=000004b4 instr=002081b3 opcode=33 funct3=0 funct7=00 rd=x3 rs1=x1 rs2=x2 rs1_value=0000000e rs2_value=0000000b result=00000019
+ADD pc=000004e4 instr=002081b3 opcode=33 funct3=0 funct7=00 rd=x3 rs1=x1 rs2=x2 rs1_value=0000000f rs2_value=0000000b result=0000001a
+ADD pc=000004e4 instr=002081b3 opcode=33 funct3=0 funct7=00 rd=x3 rs1=x1 rs2=x2 rs1_value=0000000f rs2_value=0000000b result=0000001a
+ADD pc=00000518 instr=002081b3 opcode=33 funct3=0 funct7=00 rd=x3 rs1=x1 rs2=x2 rs1_value=0000000d rs2_value=0000000b result=00000018
+ADD pc=00000518 instr=002081b3 opcode=33 funct3=0 funct7=00 rd=x3 rs1=x1 rs2=x2 rs1_value=0000000d rs2_value=0000000b result=00000018
+ADD pc=00000544 instr=002081b3 opcode=33 funct3=0 funct7=00 rd=x3 rs1=x1 rs2=x2 rs1_value=0000000e rs2_value=0000000b result=00000019
+ADD pc=00000544 instr=002081b3 opcode=33 funct3=0 funct7=00 rd=x3 rs1=x1 rs2=x2 rs1_value=0000000e rs2_value=0000000b result=00000019
+ADD pc=00000574 instr=002081b3 opcode=33 funct3=0 funct7=00 rd=x3 rs1=x1 rs2=x2 rs1_value=0000000f rs2_value=0000000b result=0000001a
+ADD pc=00000574 instr=002081b3 opcode=33 funct3=0 funct7=00 rd=x3 rs1=x1 rs2=x2 rs1_value=0000000f rs2_value=0000000b result=0000001a
+ADD pc=000005a0 instr=002081b3 opcode=33 funct3=0 funct7=00 rd=x3 rs1=x1 rs2=x2 rs1_value=0000000d rs2_value=0000000b result=00000018
+ADD pc=000005a0 instr=002081b3 opcode=33 funct3=0 funct7=00 rd=x3 rs1=x1 rs2=x2 rs1_value=0000000d rs2_value=0000000b result=00000018
+ADD pc=000005d0 instr=002081b3 opcode=33 funct3=0 funct7=00 rd=x3 rs1=x1 rs2=x2 rs1_value=0000000e rs2_value=0000000b result=00000019
+ADD pc=000005d0 instr=002081b3 opcode=33 funct3=0 funct7=00 rd=x3 rs1=x1 rs2=x2 rs1_value=0000000e rs2_value=0000000b result=00000019
+ADD pc=00000600 instr=002081b3 opcode=33 funct3=0 funct7=00 rd=x3 rs1=x1 rs2=x2 rs1_value=0000000f rs2_value=0000000b result=0000001a
+ADD pc=00000600 instr=002081b3 opcode=33 funct3=0 funct7=00 rd=x3 rs1=x1 rs2=x2 rs1_value=0000000f rs2_value=0000000b result=0000001a
+ADD pc=00000628 instr=002081b3 opcode=33 funct3=0 funct7=00 rd=x3 rs1=x1 rs2=x2 rs1_value=0000000d rs2_value=0000000b result=00000018
+ADD pc=00000628 instr=002081b3 opcode=33 funct3=0 funct7=00 rd=x3 rs1=x1 rs2=x2 rs1_value=0000000d rs2_value=0000000b result=00000018
+ADD pc=00000654 instr=002081b3 opcode=33 funct3=0 funct7=00 rd=x3 rs1=x1 rs2=x2 rs1_value=0000000e rs2_value=0000000b result=00000019
+ADD pc=00000654 instr=002081b3 opcode=33 funct3=0 funct7=00 rd=x3 rs1=x1 rs2=x2 rs1_value=0000000e rs2_value=0000000b result=00000019
+ADD pc=00000684 instr=002081b3 opcode=33 funct3=0 funct7=00 rd=x3 rs1=x1 rs2=x2 rs1_value=0000000f rs2_value=0000000b result=0000001a
+ADD pc=00000684 instr=002081b3 opcode=33 funct3=0 funct7=00 rd=x3 rs1=x1 rs2=x2 rs1_value=0000000f rs2_value=0000000b result=0000001a
+ADD pc=000006b0 instr=002081b3 opcode=33 funct3=0 funct7=00 rd=x3 rs1=x1 rs2=x2 rs1_value=0000000d rs2_value=0000000b result=00000018
+ADD pc=000006b0 instr=002081b3 opcode=33 funct3=0 funct7=00 rd=x3 rs1=x1 rs2=x2 rs1_value=0000000d rs2_value=0000000b result=00000018
+ADD pc=000006e0 instr=002081b3 opcode=33 funct3=0 funct7=00 rd=x3 rs1=x1 rs2=x2 rs1_value=0000000e rs2_value=0000000b result=00000019
+ADD pc=000006e0 instr=002081b3 opcode=33 funct3=0 funct7=00 rd=x3 rs1=x1 rs2=x2 rs1_value=0000000e rs2_value=0000000b result=00000019
+ADD pc=00000710 instr=002081b3 opcode=33 funct3=0 funct7=00 rd=x3 rs1=x1 rs2=x2 rs1_value=0000000f rs2_value=0000000b result=0000001a
+ADD pc=00000710 instr=002081b3 opcode=33 funct3=0 funct7=00 rd=x3 rs1=x1 rs2=x2 rs1_value=0000000f rs2_value=0000000b result=0000001a
+ADD pc=00000730 instr=00100133 opcode=33 funct3=0 funct7=00 rd=x2 rs1=x0 rs2=x1 rs1_value=00000000 rs2_value=0000000f result=0000000f
+ADD pc=00000744 instr=00008133 opcode=33 funct3=0 funct7=00 rd=x2 rs1=x1 rs2=x0 rs1_value=00000020 rs2_value=00000000 result=00000020
+ADD pc=00000754 instr=000000b3 opcode=33 funct3=0 funct7=00 rd=x1 rs1=x0 rs2=x0 rs1_value=00000000 rs2_value=00000000 result=00000000
+ADD pc=0000076c instr=00208033 opcode=33 funct3=0 funct7=00 rd=x0 rs1=x1 rs2=x2 rs1_value=00000010 rs2_value=0000001e result=0000002e
+Test passed
+
+#--------------------------------------
+# Summary: 1/1 tests passed
+#--------------------------------------
+
+- /workspace/scratch/1bb23622e020/scr1-lab3/src/tb/scr1_top_tb_runtests.sv:199: Verilog $finish

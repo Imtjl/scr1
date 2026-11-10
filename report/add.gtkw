@@ -1,0 +1,43 @@
+[*]
+[*] GTKWave Analyzer v3.3.121 (w)1999-2024 BSI
+[*] Tue Nov 10 09:06:38 2026
+[*]
+[dumpfile] "add.vcd"
+[dumpfile_mtime] "Tue Nov 10 09:02:55 2026"
+[dumpfile_size] 692006
+[savefile] "add.gtkw"
+[timestart] 501
+[size] 1350 850
+[pos] 0 0
+*-4.000000 537 502 512 522 532 542 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[markername] AFETCH
+[markername] BRECEIVE
+[markername] CDECODE
+[markername] DEXECUTE
+[markername] ERETIRE
+[sst_width] 180
+[signals_width] 240
+[sst_expanded] 0
+[sst_vpaned_height] 0
+@28
++{clk} TOP.clk
++{imem_req} TOP.scr1_top_tb_ahb.i_top.core_imem_req
++{imem_req_ack} TOP.scr1_top_tb_ahb.i_top.core_imem_req_ack
+@22
++{imem_addr} TOP.scr1_top_tb_ahb.i_top.core_imem_addr[31:0]
++{imem_resp} TOP.scr1_top_tb_ahb.i_top.core_imem_resp[1:0]
++{imem_rdata} TOP.scr1_top_tb_ahb.i_top.core_imem_rdata[31:0]
+@28
++{id_accept} TOP.scr1_top_tb_ahb.i_lab3_log.id_accept
+@22
++{id_instr} TOP.scr1_top_tb_ahb.i_lab3_log.id_instr[31:0]
++{curr_pc} TOP.scr1_top_tb_ahb.i_lab3_log.curr_pc[31:0]
++{ex_instr} TOP.scr1_top_tb_ahb.i_lab3_log.ex_instr[31:0]
+@28
++{add_retire} TOP.scr1_top_tb_ahb.i_lab3_log.add_retire
+@22
++{rs1_value} TOP.scr1_top_tb_ahb.i_lab3_log.rs1_value[31:0]
++{rs2_value} TOP.scr1_top_tb_ahb.i_lab3_log.rs2_value[31:0]
++{rd_value} TOP.scr1_top_tb_ahb.i_lab3_log.rd_value[31:0]
+[pattern_trace] 1
+[pattern_trace] 0

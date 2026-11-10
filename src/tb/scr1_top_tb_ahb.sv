@@ -389,5 +389,20 @@ scr1_memory_tb_ahb #(
     .dmem_hresp             (dmem_hresp )
 );
 
+// Lab 3 observer is part of the testbench, not the synthesized core.
+scr1_tb_log_cmd i_lab3_log (
+    .clk          (clk),
+    .rst_n        (i_top.i_core_top.i_pipe_top.pipe_rst_n),
+    .id_accept    (i_top.i_core_top.i_pipe_top.idu2exu_req
+                 && i_top.i_core_top.i_pipe_top.exu2idu_rdy),
+    .id_instr     (i_top.i_core_top.i_pipe_top.ifu2idu_instr),
+    .ex_retire    (i_top.i_core_top.i_pipe_top.instret),
+    .ex_exception (i_top.i_core_top.i_pipe_top.exu_exc_req),
+    .curr_pc      (i_top.i_core_top.i_pipe_top.curr_pc),
+    .rs1_value    (i_top.i_core_top.i_pipe_top.mprf2exu_rs1_data),
+    .rs2_value    (i_top.i_core_top.i_pipe_top.mprf2exu_rs2_data),
+    .rd_value     (i_top.i_core_top.i_pipe_top.exu2mprf_rd_data)
+);
+
 endmodule : scr1_top_tb_ahb
 
